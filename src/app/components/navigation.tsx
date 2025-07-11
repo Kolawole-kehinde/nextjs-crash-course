@@ -1,4 +1,5 @@
 "use client"
+import { SignInButton } from "@clerk/nextjs";
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -10,6 +11,7 @@ const Navigation = () => {
          <Link href="/" className={pathname === "/" ? "font-bold mr-4 ": "text-blue-500 mr-4"}>Home</Link>
          <Link href="/about" className={pathname === "about" ? "font-bold mr-4 ": "text-blue-500 mr-4"}>About Us</Link>
          <Link href="/products/1" className={pathname.startsWith("/products/1") ? "font-bold mr-4 ": "text-blue-500 mr-4"}>Product 1</Link>
+         <SignInButton mode="modal"/>
     </nav>
   )
 }
